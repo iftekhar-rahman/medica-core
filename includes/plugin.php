@@ -425,12 +425,16 @@ final class Plugin {
 		wp_register_style( 'testimonial-css', plugins_url( '/assets/css/testimonial.css', __FILE__ ) );
 		wp_register_style( 'gallery-css', plugins_url( '/assets/css/gallery.css', __FILE__ ) );
 		wp_register_style( 'services-css', plugins_url( '/assets/css/services.css', __FILE__ ) );
+		wp_register_style( 'blog-css', plugins_url( '/assets/css/blog.css', __FILE__ ) );
+		// wp_register_style( 'healthy-lifestyle-css', plugins_url( '/assets/css/healthy-lifestyle.css', __FILE__ ) );
 
 		wp_enqueue_style( 'swiper-bundle' );
 		wp_enqueue_style( 'common-css' );
 		wp_enqueue_style( 'testimonial-css' );
 		wp_enqueue_style( 'gallery-css' );
 		wp_enqueue_style( 'services-css' );
+		wp_enqueue_style( 'blog-css' );
+		// wp_enqueue_style( 'healthy-lifestyle-css' );
 
 
 
@@ -494,11 +498,17 @@ final class Plugin {
 		require_once( __DIR__ . '/widgets/testimonials.php' );
 		require_once( __DIR__ . '/widgets/gallery.php' );
 		require_once( __DIR__ . '/widgets/services.php' );
+		require_once( __DIR__ . '/widgets/blog.php' );
+		require_once( __DIR__ . '/widgets/healthy-lifestyle.php' );
+		// require_once( __DIR__ . '/widgets/featured-health.php' );
 
 
 		$widgets_manager->register( new \Medica_Addon\Medica_Testimonials() );
 		$widgets_manager->register( new \Medica_Addon\Medica_Gallery() );
 		$widgets_manager->register( new \Medica_Addon\Medica_Services() );
+		$widgets_manager->register( new \Medica_Addon\Medica_Blog() );
+		$widgets_manager->register( new \Medica_Addon\Medica_Healthy_LifeStyle() );
+		// $widgets_manager->register( new \Medica_Addon\Medica_Featured_Health() );
 
 	}
 

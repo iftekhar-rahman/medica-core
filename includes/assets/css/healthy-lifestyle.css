@@ -1,0 +1,26 @@
+.featured-health .blog-thumb-wrap .blog-thumb {
+    width: 100%;
+    height: 360px;
+}
+.featured-health {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.featured-health .single-item {
+    overflow: hidden;
+    border-radius: 10px;
+    height: 360px;
+    position: relative;
+}
+.featured-health .single-item h2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    color: #fff;
+    margin: 0 20px 30px 20px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2em;
+}

@@ -34,33 +34,35 @@
     });
 
     const swiper = new Swiper('.gallery', {
-      centeredSlides: true,
-      loop: true,
+      centeredSlides: false,
+      loop: false,
       speed: 500,
-      autoplay: false,
-      slidesPerView: 1.5,
-      spaceBetween: 0,
-      // autoplay: {
-      //     delay: 3000,
-      // },
+      slidesPerView: 8,
+      spaceBetween: 15,
+      autoplay: true,
+      autoplay: {
+          delay: 3000,
+      },
       navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-  
-          640: {
-              slidesPerView: 2.5,
-          },
-          768: {
-              slidesPerView: 2.75,
-          },
-          1080: {
-              slidesPerView: 3.25,
-          },
-          1280: {
-              slidesPerView: 3.75,
-          },
+        1624: {
+          slidesPerView: 8,
+        },
+        1324: {
+          slidesPerView: 6,
+        },
+        1024: {
+          slidesPerView: 5,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        0: {
+          slidesPerView: 2,
+        },
       },
   });
 
